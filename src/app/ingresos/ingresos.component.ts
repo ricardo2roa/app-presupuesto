@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Activo} from "../presupuesto.model";
 
 @Component({
   selector: 'app-ingresos',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ingresos.component.css']
 })
 export class IngresosComponent implements OnInit {
+
+  @Input()ingreso:Activo;
+  @Input()i:number=0;
 
   constructor() { }
 
