@@ -40,7 +40,17 @@ export class PresupuestoService{
     }
 
     this.total = this.totalIngresos - this.totalEgresos
+    this.imprimir(`Hola ${this.totalIngresos} ${this.totalEgresos}`)
   }
 
+  eliminarIngreso(num:number){
+    this.ingresos.splice(num,1);
+    this.totalPresupuesto()
+  }
+
+  eliminarEgreso(num:number){
+    this.egresos.splice(num,1);
+    this.totalPresupuesto()
+  }
 }
 

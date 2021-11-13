@@ -15,13 +15,15 @@ export class FormularioComponent implements OnInit {
   }
 
   lista:string[] = ["+","-"];
-  tipo:string = "";
+  tipo:string = "+";
   xdescripcion:string = "";
-  xvalor:number = 1;
+  xvalor:number = 0;
 
 
   agregar(){
     this.presupuestoService.agregarActivo(new Activo(this.xdescripcion,this.xvalor),this.tipo)
+    this.xdescripcion = "";
+    this.xvalor = 0;
     this.presupuestoService.totalIngreso.emit(this.presupuestoService.totalIngresos)
     this.presupuestoService.totalEgreso.emit(this.presupuestoService.totalEgresos)
     this.presupuestoService.totalActivos.emit(this.presupuestoService.total)

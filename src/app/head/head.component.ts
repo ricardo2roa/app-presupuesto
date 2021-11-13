@@ -7,9 +7,10 @@ import {PresupuestoService} from "../presupuesto.service";
   styleUrls: ['./head.component.css']
 })
 export class HeadComponent implements OnInit {
-  total: number;
-  ingresos:number;
-  egresos:number;
+  total: number=0;
+  ingresos:number=0;
+  egresos:number=0;
+
 
   constructor(public presupuestoService:PresupuestoService) {
     this.presupuestoService.totalEgreso.subscribe((total : number) => this.egresos = total);

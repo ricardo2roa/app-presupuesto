@@ -16,7 +16,7 @@
         <div class="presupuesto_egreso--text">Egresos</div>
           <div class="right limpiarEstilos">
               <div class="presupuesto_egreso--valor">{{egresos}}</div>
-              <div class="presupuesto_egreso--porcentaje">45%</div>
+              <div class="presupuesto_egreso--porcentaje">{{((egresos/ingresos)*100).toFixed(2)}}</div>
           </div>
         </div>
       </div>
