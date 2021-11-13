@@ -6,12 +6,14 @@ import { FormularioComponent } from './formulario/formulario.component';
 import {PresupuestoService} from "./presupuesto.service";
 import {FormsModule} from "@angular/forms";
 import { IngresosComponent } from './ingresos/ingresos.component';
+import { EgresosComponent } from './egresos/egresos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormularioComponent,
-    IngresosComponent
+    IngresosComponent,
+    EgresosComponent
   ],
   imports: [
     BrowserModule, FormsModule

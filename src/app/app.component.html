@@ -1,8 +1,6 @@
 <div class="cabecero">
   <div class="presupuesto">
-    <div class="presupuesto_titulo">
-      Presupuesto Disponible:
-    </div>
+    <div class="presupuesto_titulo">Presupuesto Disponible:</div>
 
     <div class="presupuesto_valor">+ 2,345.64</div>
 
@@ -24,43 +22,49 @@
   </div>
 </div>
 
-  <app-formulario></app-formulario>
+
+<app-formulario></app-formulario>
+
+
 
 <div class="contenedor limpiarEstilos">
   <div class="ingreso">
     <h2 class="ingreso_titulo">Ingresos</h2>
-      <app-ingresos *ngFor="let item of ingresos; let indice = index" [ingreso]="item" [i]="indice" ></app-ingresos>
+    <app-ingresos
+      *ngFor="let item of ingresos; let indice = index"
+      [ingreso]="item"
+      [i]="indice"
+    ></app-ingresos>
   </div>
-</div>
 
-
-
-  <div class="egreso">
+<div class="egreso">
     <h2 class="egreso_titulo">Egresos</h2>
 
-
-    <div class="elemento limpiarEstilos" >
+    <div class="elemento limpiarEstilos">
       <div class="elemento_descripcion">Renta departamento</div>
       <div class="right limpiarEstilos">
         <div class="elemento_valor">- 900.00</div>
         <div class="elemento_porcentaje">21%</div>
         <div class="elemento_eliminar">
-          <button class="elemento_eliminar--btn"><i class="ion-ios-close-outline"></i></button>
+          <button class="elemento_eliminar--btn">
+            <i class="ion-ios-close-outline"></i>
+          </button>
         </div>
       </div>
     </div>
 
-    <div class="elemento limpiarEstilos" >
+    <div class="elemento limpiarEstilos">
       <div class="elemento_descripcion">Ropa</div>
       <div class="right limpiarEstilos">
         <div class="elemento_valor">- 435.28</div>
         <div class="elemento_porcentaje">10%</div>
         <div class="elemento_eliminar">
-          <button class="elemento_eliminar--btn"><i class="ion-ios-close-outline"></i></button>
+          <button class="elemento_eliminar--btn">
+            <i class="ion-ios-close-outline"></i>
+          </button>
         </div>
       </div>
     </div>
-
 
   </div>
 </div>
