@@ -1,14 +1,27 @@
-<form>
+<!--<form>-->
   <div class="agregar">
     <div class="agregar_contenedor">
-      <select class="agregar_tipo" [(ngModel)]="tipo" [ngModelOptions]="{standalone: true}" >
-        <option  *ngFor="let item of lista" [value]="item" >{{item}}</option>
+      <select
+        class="agregar_tipo"
+        [(ngModel)]="tipo"
+      >
+        <option *ngFor="let item of lista" [value]="item">{{ item }}</option>
       </select>
-      <input type="text" class="agregar_descripcion" placeholder="Agregar Descripción" [(ngModel)]="xdescripcion" [ngModelOptions]="{standalone: true}">
-      <input type="number" class="agregar_valor" placeholder="Valor" [(ngModel)]="xvalor" [ngModelOptions]="{standalone: true}">
+      <input
+        type="text"
+        class="agregar_descripcion"
+        placeholder="Agregar Descripción"
+        [(ngModel)]="xdescripcion"
+      />
+      <input
+        type="number"
+        class="agregar_valor"
+        placeholder="Valor"
+        [(ngModel)]="xvalor"
+      />
       <button type="submit" class="agregar_btn" (click)="agregar()">
         <i class="ion-ios-checkmark-outline"></i>
       </button>
     </div>
   </div>
-</form>
+<!--</form>-->
