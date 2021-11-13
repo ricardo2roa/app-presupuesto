@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Activo} from "../presupuesto.model";
 
 @Component({
   selector: 'app-egresos',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EgresosComponent implements OnInit {
 
+  @Input()egresos:Activo;
+  @Input()i:number=0;
+  @Input()total:number=0;
+
   constructor() { }
+
 
   ngOnInit(): void {
   }

@@ -7,13 +7,15 @@ import {PresupuestoService} from "./presupuesto.service";
 import {FormsModule} from "@angular/forms";
 import { IngresosComponent } from './ingresos/ingresos.component';
 import { EgresosComponent } from './egresos/egresos.component';
+import { HeadComponent } from './head/head.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormularioComponent,
     IngresosComponent,
-    EgresosComponent
+    EgresosComponent,
+    HeadComponent
   ],
   imports: [
     BrowserModule, FormsModule

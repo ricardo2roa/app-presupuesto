@@ -9,16 +9,22 @@ import {Activo} from "../presupuesto.model";
 })
 export class FormularioComponent implements OnInit {
 
-  constructor(private presupuestoService: PresupuestoService){}
+  constructor(public presupuestoService:PresupuestoService){}
 
   ngOnInit(): void {
   }
 
-  lista:string[] = ["+","-"]
-  tipo:string = ""
-  xdescripcion:string = ""
-  xvalor:number = 1
+  lista:string[] = ["+","-"];
+  tipo:string = "";
+  xdescripcion:string = "";
+  xvalor:number = 1;
 
-  agregar(){this.presupuestoService.agregarActivo(new Activo(this.xdescripcion,this.xvalor),this.tipo)};
+
+  agregar(){
+    this.presupuestoService.agregarActivo(new Activo(this.xdescripcion,this.xvalor),this.tipo)
+    this.presupuestoService.totalIngreso.emit(this.presupuestoService.totalIngresos)
+    this.presupuestoService.totalEgreso.emit(this.presupuestoService.totalEgresos)
+    this.presupuestoService.totalActivos.emit(this.presupuestoService.total)
+  }
 
 }
