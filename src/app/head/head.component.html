@@ -2,12 +2,12 @@
     <div class="presupuesto">
       <div class="presupuesto_titulo">Presupuesto Disponible:</div>
 
-       <div class="presupuesto_valor">{{total}}</div>
+       <div class="presupuesto_valor">{{total | currency:"COL":'$':'1.2-2'}}</div>
 
       <div class="presupuesto_ingreso limpiarEstilos">
           <div class="presupuesto_ingreso--texto">Ingresos</div>
           <div class="right">
-            <div class="presupuesto_ingreso--valor">{{ingresos}}</div>
+            <div class="presupuesto_ingreso--valor">{{ingresos | currency:"COL":'$':'1.2-2'}}</div>
             <div class="presupuesto_ingreso--porcentaje">&nbsp;</div>
           </div>
       </div>
@@ -15,7 +15,7 @@
       <div class="presupuesto_egreso limpiarEstilos">
         <div class="presupuesto_egreso--text">Egresos</div>
           <div class="right limpiarEstilos">
-              <div class="presupuesto_egreso--valor">{{egresos}}</div>
+              <div class="presupuesto_egreso--valor">{{egresos | currency:"COL":'$':'1.2-2'}}</div>
               <div class="presupuesto_egreso--porcentaje">{{((egresos/ingresos)*100).toFixed(2)}}</div>
           </div>
         </div>

@@ -4,6 +4,7 @@
       <select
         class="agregar_tipo"
         [(ngModel)]="tipo"
+        [ngClass]="{redfocus: tipo === '-'}"
       >
         <option *ngFor="let item of lista" [value]="item">{{ item }}</option>
       </select>
@@ -12,12 +13,14 @@
         class="agregar_descripcion"
         placeholder="Agregar Descripción"
         [(ngModel)]="xdescripcion"
+        [ngClass]="{redfocus: tipo === '-'}"
       />
       <input
         type="number"
         class="agregar_valor"
         placeholder="Valor"
         [(ngModel)]="xvalor"
+        [ngClass]="{redfocus: tipo === '-'}"
       />
       <button type="submit" class="agregar_btn" (click)="agregar()">
         <i class="ion-ios-checkmark-outline"></i>
