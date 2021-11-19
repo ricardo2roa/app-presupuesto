@@ -8,6 +8,7 @@ import {FormsModule} from "@angular/forms";
 import { IngresosComponent } from './ingresos/ingresos.component';
 import { EgresosComponent } from './egresos/egresos.component';
 import { HeadComponent } from './head/head.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { HeadComponent } from './head/head.component';
     HeadComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [PresupuestoService],
   bootstrap: [AppComponent]
